@@ -1,12 +1,12 @@
-# SQL-RFM
-Snowflake SQL Customer Segmentation (RFM) 
-**Project Goal**
-To identify high-value customers, understand purchasing behavior, and segment the user base for targeted marketing strategies. This analysis provides actionable insights to prevent customer churn and maximize revenue from top-tier buyers.
-**Tools & Technologies**
+# SQL-RFM  
+Snowflake SQL Customer Segmentation (RFM)   
+**Project Goal**  
+To identify high-value customers, understand purchasing behavior, and segment the user base for targeted marketing strategies. This analysis provides actionable insights to prevent customer churn and maximize revenue from top-tier buyers. 
+**Tools & Technologies**  
 Snowflake Data Warehouse: Connected to the TPCH_SF1 sample database.SQL: Advanced querying using Common Table Expressions (CTEs), Aggregate Functions (MAX, SUM, AVG, COUNT), Window Functions (MEDIAN), and multi-table JOINs.
-**The Process & Logic**
+**The Process & Logic**  
 I chose to use a CASE-based approach for RFM Scores using medians instead of NTILE, not just to keep things simple, but because it actually made more sense for the skewed data.
-**Data Aggregation:**
+**Data Aggregation:**  
 Built a customer-level base table by joining ORDERS, CUSTOMER, and NATION tables.
 **RFM Value Calculation:** 
 Recency: Days since the last order. I weighted Recency as the most critical factor for customer vitality.Frequency: Total count of orders per customer.Monetary: Total amount spent by the customer.
